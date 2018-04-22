@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/controller/CommonInterceptor.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/controller/DoctorController.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/controller/DrugsController.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/controller/TestController.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/controller/UserController.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/service/DoctorServerImpl.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/service/DoctorService.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/service/UserServiceImpl.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/util/ImageYzmUtils.java" charset="GB2312" />
+  </component>
+</project>
