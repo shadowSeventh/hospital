@@ -12,7 +12,7 @@ $(function () {
     if (Jurisdiction == 0) {
         $("#yonghuguanli").css("display", "");
         $("#yishengguanli").css("display", "");
-        $("#canshushezhi").css("display", "");
+        // $("#canshushezhi").css("display", "");
         $("#gangwei").text("管理员]");
     }
     //大堂服务台岗位
@@ -22,10 +22,10 @@ $(function () {
         $("#chuyuanguanli").css("display", "");
         $("#gangwei").text("大堂服务台]");
     }
-    // 统计科主管统计科主管岗位
+    // 药剂师
     if(Jurisdiction==2){
-    	$("#tongjichaxun").css("display","");
-    	$("#gangwei").text("统计科主管]");
+    	$("#yaopinguanli").css("display","");
+    	$("#gangwei").text("药剂师]");
     }
     //护士岗位
     if (Jurisdiction == 3) {
@@ -36,8 +36,9 @@ $(function () {
     }
     //医生岗位
     if (Jurisdiction == 4) {
-        $("#yaopinguanli").css("display", "");
-        $("#gangwei").text("医生]");
+        $("#yizhuguanli").css("display", "");
+        $("#tongjichaxun").css("display", "");
+        $("#gangwei").text("统计科管理]");
     }
 
     $.ajax({

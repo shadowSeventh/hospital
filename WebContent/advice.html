@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/info-reg.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.dialog.css" />
+<title>仁心病房管理系统</title>
+</head>
+
+<body>
+	<div class="title">
+		<h2>医嘱录入</h2>
+	</div>
+	<form id="advice">
+	<div class="main">
+		<p class="short-input ue-clear">
+			<label><font color="red">*</font>住院编号：</label>
+			<input id="patientId" name="patientId" type="search" results="s" readonly placeholder="住院编号">
+		</p>
+		<p class="short-input ue-clear">
+			<label>姓&nbsp;&nbsp;&nbsp;&nbsp;名：</label> <input id="patientName" name="patientName" readonly type="text" placeholder="姓名" />
+		</p>
+		<p class="short-input ue-clear">
+			<label>床位号：</label> <input type="text" id="bedNo" name="bedNo" readonly placeholder="床位号" />
+		</p>
+		<!--<p class="short-input ue-clear">-->
+			<!--<label><font color="red">*</font>测量时间：</label> <input type="text"-->
+				<!--id="measureTime" name="measureTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"-->
+				<!--placeholder="测量时间" />-->
+		<!--</p>  -->
+		<p class="short-input ue-clear">
+			<label>住院天数：</label> <input type="text"
+				name="hospitalStays" placeholder="住院天数" />
+		</p>
+		<p class="short-input ue-clear">
+			<label>诊断：</label>
+			<textarea placeholder="诊断" name="result"></textarea>
+		</p>
+		<p class="short-input ue-clear">
+			<label>医嘱名称：</label> <input type="text"
+			name="adviceName" placeholder="医嘱名称" />
+		</p>
+		<p class="short-input ue-clear">
+			<label>医嘱执行频率(次/日)：</label> <input type="text" name="frequency"  placeholder="医嘱执行频率" />
+		</p>
+		<p class="short-input ue-clear">
+			<label>药品规格：</label> <input type="text" name="spec" placeholder="药品规格" />
+		</p>
+		<p class="short-input ue-clear">
+			<label>药品一次用量：</label> <input type="text" name="dosage" placeholder="药品一次用量" />
+		</p>
+		<p class="short-input ue-clear">
+			<label>给药方式：</label> <input type="text" name="giveType" placeholder="给药方式" />
+		</p>
+		<p class="short-input ue-clear">
+		<label>开始时间：</label> <input type="text"
+		id="startTime" name="startTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"
+		placeholder="开始时间" />
+		<p class="short-input ue-clear">
+		<label>停止时间：</label> <input type="text"
+		id="endTime" name="endTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"
+		placeholder="停止时间" />
+		</p>
+		<p class="short-input ue-clear">
+			<label>备注：</label>
+			<textarea placeholder="备注" name="remarks"></textarea>
+		</p>
+	</div>
+	<div class="btn ue-clear">
+		<a href="javascript:;" class="confirm">保存</a> <a href="javascript:;"
+			class="clear">重置</a>
+	</div>
+	<!-- 病人查询 -->
+ 	<div  class="patientQuery">
+		<iframe src="patient_find.html" frameBorder="0" width="100%" scrolling="auto" height="100%"></iframe>
+	</div>
+	</form>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/WdatePicker.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/jquery.dialog.js"></script>
+<script type="text/javascript" src="js/sign/signEntry.js"></script>
+</html>
