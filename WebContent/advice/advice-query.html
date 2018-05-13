@@ -13,7 +13,7 @@
 	<div class="title">
 		<h2>医嘱查询</h2>
 	</div>
-	<form id="signQueryForm">
+	<form id="adviceQueryForm">
 		<input style="display: none;" id="departmentNo" name="departmentNo"
 			type="text" value="" />
 		<div class="query">
@@ -27,7 +27,7 @@
 						type="text" id="name" name="name" />
 				</div>
 				<div class="conditions time ue-clear">
-					<label>测量时间：</label>
+					<label>录入时间：</label>
 					<div class="time-select">
 						<input type="text" name="start"
 							onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" placeholder="开始时间" />
@@ -59,14 +59,14 @@
 						<th class="node">住院号</th>
 						<th class="num">床号</th>
 						<th class="name">姓名</th>
- 						<th class="name">体温(℃)</th>
-						<th class="name">脉搏(次/分)</th>
-						<th class="name">呼吸(次/分)</th>
-						<th class="name">血糖(mg/d)</th>
-						<th class="name">血压(mmhg)</th>
-						<th class="name">静脉(ml)</th>
-						<th class="time">测量时间</th>
-						<th class="name">登记人</th>
+ 						<th class="name">医嘱名称</th>
+						<th class="name">医嘱执行频率</th>
+						<th class="name">住院天数</th>
+						<th class="name">诊断</th>
+						<th class="time">药品规格</th>
+						<th class="name">药品一次用量</th>
+						<th class="name">给药方式</th>
+						<th class="name">创建时间</th>
 					</tr>
 				</thead>
 				<tbody id="show">
@@ -80,7 +80,7 @@
 <script type="text/javascript" src="../js/common.js"></script>
 <script type="text/javascript" src="../js/WdatePicker.js"></script>
 <script type="text/javascript" src="../js/jquery.pagination.js"></script>
-<script type="text/javascript" src="sign-query.js"></script>
+<script type="text/javascript" src="advice-query.js"></script>
 <script type="text/javascript">
 </script>
 </html>

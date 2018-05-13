@@ -9,9 +9,9 @@ $(function(){
 
 //执行查询
 function confirm(){
-	var queryData = $("#signQueryForm").serialize();
+	var queryData = $("#adviceQueryForm").serialize();
 	$.ajax({
-		url:'signQuery.do',
+		url:'adviceQuery.do',
 		type:'post',
 		data:queryData,
 		dataType: 'JSON',
@@ -41,16 +41,11 @@ function showList(lists,start,end){
 	if(lists.length>0){
 		for(var i=start;i<end;i++){
 			var patient = lists[i];
-			var ctime = patient.measureTime;
-			var newDate = new Date();
-			newDate.setTime(ctime);
+			// var ctime = patient.createTime;
+			// var newDate = new Date();
+			// newDate.setTime(ctime);
 			var trStyle;
-			if(patient.pulse==null){
-				patient.pulse=0;
-			}
-			if(patient.breathing==null){
-				patient.breathing=0;
-			}
+
 			if((i+1)%2==0){
 				trStyle = "<tr style='background-color:#eff6fa'>";
 			}else{
@@ -61,14 +56,15 @@ function showList(lists,start,end){
 					"<td class='node'>"+patient.patientId+"</td>"+
 					"<td class='num'>"+patient.bedNo+"</td>"+
 					"<td class='num'>"+patient.patientName+"</td>"+
-					"<td class='name'>"+patient.temperature+"</td>"+
-					"<td class='name'>"+patient.pulse+"</td>"+
-					"<td class='name'>"+patient.breathing+"</td>"+
-					"<td class='name'>"+patient.bloodSugar+"</td>"+
-					"<td class='name'>"+patient.bloodPressure+"</td>"+
-					"<td class='name'>"+patient.vein+"</td>"+
-					"<td class='time'>"+newDate.toLocaleString()+"</td>"+
-					"<td class='name'>"+patient.userName+"</td>"+
+					"<td class='name'>"+patient.adviceName+"</td>"+
+					"<td class='name'>"+patient.frequency+"</td>"+
+					"<td class='name'>"+patient.hospitalStays+"</td>"+
+					"<td class='name'>"+patient.result+"</td>"+
+					"<td class='name'>"+patient.spec+"</td>"+
+					"<td class='name'>"+patient.dosage+"</td>"+
+					"<td class='name'>"+patient.giveType+"</td>"+
+					"<td class='time'>"+patient.createTime+"</td>"+
+					// "<td class='name'>"+patient.userName+"</td>"+
 					"</tr>";
 			$tbody.append($tr);
 			}
@@ -77,5 +73,5 @@ function showList(lists,start,end){
 
 //清空条件按钮
 function clear(){
-	$("#signQueryForm :input").val("");
+	$("#adviceQueryForm :input").val("");
 }

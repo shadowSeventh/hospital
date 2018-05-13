@@ -6,9 +6,12 @@
     <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/controller/DrugsController.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/controller/TestController.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/controller/UserController.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/dao/BedDao.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/entity/Drugs.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/service/DoctorServerImpl.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/service/DoctorService.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/service/UserServiceImpl.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/util/BaseUtils.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/cdu/edu/hospital/util/ImageYzmUtils.java" charset="GB2312" />
   </component>
 </project>

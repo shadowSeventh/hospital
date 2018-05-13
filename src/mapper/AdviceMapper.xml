@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="cdu.edu.hospital.dao.AdviceDao">
+	<!-- 保存病人体征信息 -->
+	<insert id="adviceSave" parameterType="cdu.edu.hospital.entity.Advice">
+		insert into
+			advice(patientId,hospitalStays,result,adviceName,frequency,spec,dosage,giveType,startTime,endTime,createTime,remarks)
+		values(#{patientId},#{hospitalStays},#{result},#{adviceName},#{frequency},#{spec},#{dosage},#{giveType},#{startTime},#{endTime},NOW(),#{remarks})
+	</insert>
+	<!-- 查询病人体征信息 -->
+	<select id="adviceQuery" parameterType="cdu.edu.hospital.entity.PatientCode" resultType="map">
+	select
+		a.patientId as "patientId",
+		b.roomNo as "roomNo",
+		b.bedNo as "bedNo",
+		b.patientName as "patientName",
+		a.hospitalStays as "hospitalStays",
+		a.result as "result",
+		a.adviceName as "adviceName",
+		a.frequency as "frequency",
+		a.spec as "spec",
+		a.dosage as "dosage",
+		a.giveType as "giveType",
+		a.startTime as "startTime",
+		a.endTime as "endTime",
+		a.createTime as "createTime",
+		a.remarks as "remarks"
+	from
+		advice a
+		LEFT JOIN patient b on a.patientId = b.patientId
+	where
+		1=1	
+		and
+ 			if(#{patientId} is null,0=0,a.patientId=#{patientId})
+ 		 and
+		  	if(#{name} is null,0=0, b.patientName like CONCAT('%',#{name},'%'))
+		 and
+		 	if(#{start} is null,0=0,a.createTime &gt;= #{start})
+		 and  
+		 	if(#{end} is null,0=0,a.createTime &lt;= #{end})
+		  and
+		  	if(#{wardNo} is null,0=0,b.roomNo=#{wardNo})
+		 and
+		 	if(#{bedNo} is null,0=0,b.bedNo=#{bedNo})
+		 order by 
+		 	a.patientId,a.createTime
+	</select>
+</mapper>

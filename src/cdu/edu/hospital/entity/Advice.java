@@ -10,11 +10,11 @@ public class Advice implements Serializable {
 	private Integer id;
 
 	// 住院编号
-	private Integer patientId;
+	private String patientId;
 	// 姓名
 	private String patientName;
 	// 床位号
-	private Integer bedNo;
+	private String bedNo;
 	//住院天数
 	private Integer hospitalStays;
 
@@ -45,6 +45,8 @@ public class Advice implements Serializable {
 	//备注
 	private String remarks;
 
+	private Date createTime;
+
 	public static long getSerialVersionUID() {
 		return serialVersionUID;
 	}
@@ -57,11 +59,11 @@ public class Advice implements Serializable {
 		this.id = id;
 	}
 
-	public Integer getPatientId() {
+	public String getPatientId() {
 		return patientId;
 	}
 
-	public void setPatientId(Integer patientId) {
+	public void setPatientId(String patientId) {
 		this.patientId = patientId;
 	}
 
@@ -73,11 +75,11 @@ public class Advice implements Serializable {
 		this.patientName = patientName;
 	}
 
-	public Integer getBedNo() {
+	public String getBedNo() {
 		return bedNo;
 	}
 
-	public void setBedNo(Integer bedNo) {
+	public void setBedNo(String bedNo) {
 		this.bedNo = bedNo;
 	}
 
@@ -160,4 +162,12 @@ public class Advice implements Serializable {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 }

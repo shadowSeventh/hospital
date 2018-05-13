@@ -88,7 +88,7 @@ function showList(list,start,end){
 				describe = "大堂服务台岗位";
 			}
 			if(user.describe=="2"){
-				describe = "统计科主管岗位";
+				describe = "药剂师";
 			}
 			if(user.describe=="3"){
 				describe = "护士岗位";

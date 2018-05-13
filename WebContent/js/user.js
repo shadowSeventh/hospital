@@ -38,7 +38,7 @@ $(function () {
     if (Jurisdiction == 4) {
         $("#yizhuguanli").css("display", "");
         $("#tongjichaxun").css("display", "");
-        $("#gangwei").text("统计科管理]");
+        $("#gangwei").text("医生]");
     }
 
     $.ajax({
